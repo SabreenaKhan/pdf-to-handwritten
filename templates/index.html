@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF to Handwritten Notes</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Convert PDF to Handwritten Notes</h1>
+    <form action="/convert" method="POST" enctype="multipart/form-data">
+      <label>Select PDF File:</label>
+      <input type="file" name="file" accept=".pdf" required>
+
+      <label>Font Size:</label>
+      <input type="number" name="font_size" value="24" min="16" max="40">
+
+      <label>Text Color:</label>
+      <input type="color" name="text_color" value="#1e3a8a"> <!-- ink blue -->
+
+      <label>Heading Color:</label>
+      <input type="color" name="heading_color" value="#000000"> <!-- black -->
+
+      <label>Paper Style:</label>
+      <select name="paper_style">
+        <option value="ruled">Ruled Notebook</option>
+        <option value="plain">Plain</option>
+        <option value="grid">Grid</option>
+      </select>
+      <label for="font_name">Select Font:</label>
+        <select name="font_name">
+            <option value="HandFont" selected>Peax Handwritinglight</option>
+            <option value="Another font1">Glitter</option>
+            <option value="Another font2">Sacramento</option>
+            <option value="Another font3">Whitenice</option>
+            <option value="Another font4">Barokah</option>
+        </select><br><br>
+
+      <button type="submit">Generate Handwritten PDF</button>
+    </form>
+  </div>
+</body>
+</html>
