@@ -11,7 +11,9 @@ import re
 
 import os
 from flask import Flask, render_template, request, send_file
-app=Flask(__name__, static_folder='../static', static_url_path='/static')
+app=Flask(__name__, 
+            template_folder='../templates', 
+            static_folder='../static')
 # Constants
 PAGE_WIDTH, PAGE_HEIGHT = A4
 LEFT_MARGIN = 70
