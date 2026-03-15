@@ -1,22 +1,40 @@
+/* Apply height to both to ensure the canvas exists */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: sans-serif;
-    background: #f8f9fa;
     padding: 30px;
-    background-image: url("/static/background.jpg");
+    min-height: 100vh;
+    /* Use a direct URL first to test if the code works */
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* This is key for visibility */
+}
+/* body {
+    font-family: sans-serif;
+    padding: 30px;
+    min-height: 100vh;
+    background-image: url("https://picsum.photos/1920/1080");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
-  
+   */
   .container {
     max-width: 600px;
-    background: white;
+    background: rgba(255, 255, 255, 0.1);  /* light transparent white */
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     margin: auto;
-    background: rgba(255, 255, 255, 0.1);  /* light transparent white */
     backdrop-filter: blur(5px);           /* blur effect */
-    -webkit-backdrop-filter: blur(10px)
-    
-
+    -webkit-backdrop-filter: blur(10px);
   }
   
   h1 {
@@ -41,4 +59,5 @@ body {
     color: white;
     cursor: pointer;
   }
+
   

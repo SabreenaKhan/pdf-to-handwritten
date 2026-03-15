@@ -1,0 +1,2 @@
+[console_scripts]
+u8loc = utf8_locale.__main__:main
